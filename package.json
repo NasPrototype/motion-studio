@@ -1,0 +1,28 @@
+{
+  "name": "motion-studio",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Engineering Motion Studio: multi-domain simulation with a live 3D view.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && vite build --ssr server/serve.ts --outDir dist-server",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "serve": "node dist-server/serve.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.6.0",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/three": "^0.178.0",
+    "@types/ws": "^8.18.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^4.1.12",
+    "ws": "^8.22.1"
+  }
+}
